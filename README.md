@@ -1,7 +1,6 @@
 ```
 docker run --name nginx -p 8080:80 -d nginx
-doc
-ker cp default.conf nginx:/etc/nginx/conf.d/default.conf
+docker cp default.conf nginx:/etc/nginx/conf.d/default.conf
 docker exec nginx nginx -s reload
 
 docker run --name mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=demo -d mysql
