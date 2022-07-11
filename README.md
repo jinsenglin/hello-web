@@ -1,3 +1,4 @@
+```
 docker run --name nginx -p 8080:80 -d nginx
 docker cp default.conf nginx:/etc/nginx/conf.d/default.conf
 docker exec nginx nginx -s reload
@@ -24,3 +25,4 @@ curl localhost:8080
 curl localhost:8080/gui
 curl localhost:8080/api
 open http://localhost:8080/gui
+```
