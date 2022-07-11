@@ -37,3 +37,14 @@ docker run --name api -p 8082:80 -d yourname/api
 
 docker network connect demo api
 ```
+
+```
+docker stop api
+docker rm api
+
+cd py
+docker build -t yourname/api .
+docker run --name api -p 8082:80 -d yourname/api
+
+docker network connect demo api
+```
