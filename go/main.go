@@ -12,6 +12,8 @@ func getTable(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintln(w, "Cannot get cookie")
 	}
 
+	// TODO: load data from database
+
 	fmt.Fprintln(w, c)
 }
 
