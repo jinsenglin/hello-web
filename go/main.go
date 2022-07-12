@@ -37,7 +37,7 @@ func setCookie(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-    http.HandleFunc("/cookie/table", getTable)
+    http.HandleFunc("/private/table", getTable)
     http.HandleFunc("/cookie/get", getCookie)
     http.HandleFunc("/cookie/set", setCookie)
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
