@@ -12,6 +12,8 @@ func setCookie(w http.ResponseWriter, r *http.Request) {
 		Name:     "username",
 		Value:    "bater",
 		HttpOnly: true,
+        Domain: "localhost",
+        Path: "/",
 	}
 	http.SetCookie(w, &c)
 }
