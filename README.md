@@ -26,6 +26,8 @@ curl localhost:8080
 curl localhost:8080/gui
 curl localhost:8080/api
 open http://localhost:8080/gui
+open http://localhost:8080/gui/cookie.html
+open http://localhost:8080/api/cookie/set
 ```
 
 ```
