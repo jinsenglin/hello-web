@@ -12,6 +12,7 @@ docker exec mysql mysql -uroot -pdemo -e 'select * from demo.demo;'
 docker run --name gui -p 8081:80 -d nginx
 docker cp gui-index.html gui:/usr/share/nginx/html/index.html
 docker cp gui-cookie.html gui:/usr/share/nginx/html/cookie.html
+docker cp gui-table.html gui:/usr/share/nginx/html/table.html
 
 docker run --name api -p 8082:80 -d nginx
 docker cp api-index.html api:/usr/share/nginx/html/index.html
@@ -28,6 +29,7 @@ curl localhost:8080/api
 open http://localhost:8080/gui
 open http://localhost:8080/gui/cookie.html
 open http://localhost:8080/api/cookie/set
+open http://localhost:8080/gui/table.html
 ```
 
 ```
