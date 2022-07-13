@@ -37,7 +37,8 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
            document.getElementById("demo2").innerHTML = xhttp.responseText;
         }
     };
-    xhttp.open("GET", "http://localhost:8080/api/private/table", true);
+    //xhttp.open("GET", "http://localhost:8080/api/private/table", true);
+    xhttp.open("GET", "http://localhost:8080/gui/table.json", true);
     xhttp.send();
     
     }, 3000);

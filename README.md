@@ -13,6 +13,7 @@ docker run --name gui -p 8081:80 -d nginx
 docker cp gui-index.html gui:/usr/share/nginx/html/index.html
 docker cp gui-cookie.html gui:/usr/share/nginx/html/cookie.html
 docker cp gui-table.html gui:/usr/share/nginx/html/table.html
+docker cp gui-table.json gui:/usr/share/nginx/html/table.json
 
 docker run --name api -p 8082:80 -d nginx
 docker cp api-index.html api:/usr/share/nginx/html/index.html
@@ -23,9 +24,9 @@ docker network connect demo mysql
 docker network connect demo gui
 docker network connect demo api
 
-curl localhost:8080
-curl localhost:8080/gui
-curl localhost:8080/api
+curl http://localhost:8080
+curl http://localhost:8080/gui
+curl http://localhost:8080/api
 open http://localhost:8080/gui
 open http://localhost:8080/gui/cookie.html
 open http://localhost:8080/api/cookie/set
