@@ -34,7 +34,8 @@ font-family: Tahoma, Verdana, Arial, sans-serif; }
         if (this.readyState == 4 && this.status == 200) {
            // Typical action to be performed when the document is ready:
            document.getElementById("demo1").innerHTML = Date();
-           document.getElementById("demo2").innerHTML = xhttp.responseText;
+           data = JSON.parse(xhttp.responseText);
+           document.getElementById("demo2").innerHTML = data.baseday;
         }
     };
     //xhttp.open("GET", "http://localhost:8080/api/private/table", true);
